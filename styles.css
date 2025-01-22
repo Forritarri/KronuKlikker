@@ -38,10 +38,12 @@ section {
 }
 
 .left img.krona {
-    width: 150px;
+    width: 20rem;
     height: auto;
     cursor: pointer; /* # Benda bendill þegar smellt er */
     transition: transform 0.1s ease; /* # Smá hreyfing við smelli */
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .left img.krona:active {
