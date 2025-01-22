@@ -1,41 +1,36 @@
-1<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>Klikker</title>
-    </head>
-    <body>
-        <section>
-            <div class="main">
-                <div class="left">
-                    <h3>Krónur: <span class="penge">0</span></h3>
-                    <img src="myndir/Krona.png" alt="" class="krona" onclick="incrementGem()" draggable="false">
-                </div>
-                <div class="right">
-                    <div class="upgrade" onclick="buyClicker()">
-                        <div class="leftsection">
-                            <img src="" alt="">
-                        </div>
-                        <div class="midsection">
-                            <h4>Klikker</h4>
-                            <div class="kostur">
-                                <p>Kostnaður: <span class="clickercost">10</span></p>
-                                <img src="myndir/Krona.png" alt="" class="kronamidsection">
-                            </div>
-                        </div>
-                        <div class="rightsection">
-                            <span class="level">Level 0</span>
-                        </div>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Klikker</title>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <!-- # Krónusvæði -->
+            <div class="left">
+                <h3>Krónur: <span class="penge">0</span></h3>
+                <h5>Leita að Krónum</h5>
+                <img src="myndir/Krona.png" alt="Mynd af krónu" class="krona" onclick="incrementGem()" draggable="false">
             </div>
-        </section>
-        <footer style="text-align: right; padding-right: 20px;">
-            <p>v1.1</p>
-            <p>100.000 Kr. til að vinna, tekur smá tíma</p>
-        </footer>
-        <script src="index.js"></script>
-    </body>
+
+            <!-- # Verslun -->
+            <div class="right">
+                <h2>Sjálfsmellar</h2>
+                <div class="autoclicker-shop"></div>
+
+                <h2>Handvirkar Uppfærslur</h2>
+                <div class="manual-shop"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: right; padding-right: 20px;">
+        <p>v2 - Smelltu til að safna krónur!</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
 </html>
