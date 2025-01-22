@@ -6,7 +6,7 @@ let intervalId = null; // # Tímabilsauðkenni fyrir sjálfvirka söfnun
 
 // # Uppfærslulistar (niður minnkuð áhrif og hækkaður kostnaður)
 let autoClickers = [
-    { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 2 },
+    { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 1 },
     { name: "Plata heimilislausa til þess að hjálpa þér", cost: 250, increment: 5 },
     { name: "Plata fólk til þess að hjálpa þér", cost: 1000, increment: 10 },
     { name: "Kaupa lélega peningavél", cost: 10000, increment: 50 },
