@@ -9,12 +9,12 @@ let autoClickers = [
     { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 0.5 },
     { name: "Plata heimilislausa til þess að hjálpa þér", cost: 250, increment: 2 },
     { name: "Plata fólk til þess að hjálpa þér", cost: 1000, increment: 5 },
-    { name: "Kaupa lélega peningavél", cost: 20000, increment: 30 },
-    { name: "Krónu-finnandi drónar", cost: 100000, increment: 75 },
-    { name: "Walter Krónu White til að framleiða Krónur", cost: 500000, increment: 200 },
-    { name: "Ástþór Magnússon stonfar ólöglegan Krónubransa", cost: 2000000, increment: 500 },
-    { name: "Guðni Th. byrjar að framleiða Krónur", cost: 10000000, increment: 1500 },
-    { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 50000000, increment: 5000 },
+    { name: "Kaupa lélega peningavél", cost: 10000, increment: 30 },
+    { name: "Krónu-finnandi drónar", cost: 50000, increment: 75 },
+    { name: "Walter Krónu White til að framleiða Krónur", cost: 125000, increment: 200 },
+    { name: "Ástþór Magnússon stonfar ólöglegan Krónubransa", cost: 250000, increment: 500 },
+    { name: "Guðni Th. byrjar að framleiða Krónur", cost: 500000, increment: 1500 },
+    { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 1000000, increment: 5000 },
 ];
 
 let manualUpgrades = [
@@ -38,7 +38,7 @@ function buyAutoClicker(index) {
     if (currentPoints >= clicker.cost) {
         gem.innerHTML = currentPoints - clicker.cost; // # Draga frá kostnaði
         autoIncrement += clicker.increment; // # Auka heildar autoclicking hraða
-        clicker.cost = Math.ceil(clicker.cost * 1.8); // # Hækka kostnað meira
+        clicker.cost = Math.ceil(clicker.cost * 1.15); // # Hækka kostnað meira
         updateShop(); // # Uppfæra viðmót
         startAutoClicking(); // # Tryggja sjálfvirk söfnun
     }
