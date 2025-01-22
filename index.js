@@ -6,23 +6,23 @@ let intervalId = null; // # Tímabilsauðkenni fyrir sjálfvirka söfnun
 
 // # Uppfærslulistar (niður minnkuð áhrif og hækkaður kostnaður)
 let autoClickers = [
-    { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 0.5 },
-    { name: "Plata heimilislausa til þess að hjálpa þér", cost: 250, increment: 2 },
-    { name: "Plata fólk til þess að hjálpa þér", cost: 1000, increment: 5 },
-    { name: "Kaupa lélega peningavél", cost: 10000, increment: 30 },
-    { name: "Krónu-finnandi drónar", cost: 50000, increment: 75 },
-    { name: "Walter Krónu White til að framleiða Krónur", cost: 125000, increment: 200 },
-    { name: "Ástþór Magnússon stonfar ólöglegan Krónubransa", cost: 250000, increment: 500 },
+    { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 1 },
+    { name: "Plata heimilislausa til þess að hjálpa þér", cost: 250, increment: 5 },
+    { name: "Plata fólk til þess að hjálpa þér", cost: 1000, increment: 10 },
+    { name: "Kaupa lélega peningavél", cost: 10000, increment: 50 },
+    { name: "Krónu-finnandi drónar", cost: 50000, increment: 100 },
+    { name: "Walter Krónu White til að framleiða Krónur", cost: 125000, increment: 500 },
+    { name: "Ástþór Magnússon stonfar ólöglegan Krónubransa", cost: 250000, increment: 1000 },
     { name: "Guðni Th. byrjar að framleiða Krónur", cost: 500000, increment: 1500 },
-    { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 1000000, increment: 5000 },
+    { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 1000000, increment: 10000 },
 ];
 
 let manualUpgrades = [
     { name: "Opna augun", cost: 100, increment: 1 },
     { name: "Gramsa í ruslinu", cost: 500, increment: 3 },
-    { name: "Segull", cost: 2500, increment: 7 },
-    { name: "Vélmenni", cost: 10000, increment: 20 },
-    { name: "Blessun Jesú Krists", cost: 50000, increment: 50 },
+    { name: "Segull", cost: 2500, increment: 5 },
+    { name: "Vélmenni", cost: 10000, increment: 40 },
+    { name: "Blessun Jesú Krists", cost: 50000, increment: 60 },
 ];
 
 // # Handvirkur smellur
