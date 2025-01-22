@@ -12,7 +12,7 @@ let autoClickers = [
     { name: "Kaupa lélega peningavél", cost: 10000, increment: 50 },
     { name: "Krónu-finnandi drónar", cost: 50000, increment: 100 },
     { name: "Walter Krónu White til að framleiða Krónur", cost: 125000, increment: 500 },
-    { name: "Ástþór Magnússon stonfar ólöglegan Krónubransa", cost: 250000, increment: 1000 },
+    { name: "Ástþór Magnússon stofnar ólöglegan Krónubransa", cost: 250000, increment: 1000 },
     { name: "Guðni Th. byrjar að framleiða Krónur", cost: 500000, increment: 1500 },
     { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 1000000, increment: 10000 },
 ];
@@ -103,7 +103,7 @@ updateShop();
 document.getElementById("play-btn").addEventListener("click", () => {
     let currentPoints = parseFloat(gem.innerHTML); // Númer af núverandi krónur
     const cost = 100; // Kostnaður fyrir leikinn
-    const reward = 1000; // Vinningur
+    const reward = 100000; // Vinningur
     const resultElement = document.getElementById("result"); // Staða niðurstaðna
 
     if (currentPoints >= cost) {
