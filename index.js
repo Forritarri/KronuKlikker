@@ -93,3 +93,32 @@ function updateShop() {
 
 // # Upphafskall
 updateShop();
+
+
+
+
+
+
+
+document.getElementById("play-btn").addEventListener("click", () => {
+    let currentPoints = parseFloat(gem.innerHTML); // Númer af núverandi krónur
+    const cost = 100; // Kostnaður fyrir leikinn
+    const reward = 1000; // Vinningur
+    const resultElement = document.getElementById("result"); // Staða niðurstaðna
+
+    if (currentPoints >= cost) {
+        gem.innerHTML = currentPoints - cost; // Draga frá kostnað
+
+        if (Math.random() < 0.01) { // 1% líkur á sigri
+            gem.innerHTML = parseFloat(gem.innerHTML) + reward; // Bæta við vinning
+            resultElement.innerHTML = "Til hamingju! Þú vannst 1000 krónur! 🎉";
+            resultElement.style.color = "green";
+        } else {
+            resultElement.innerHTML = "Því miður, þú tapaðir 100 krónum. Prófaðu aftur! 😞";
+            resultElement.style.color = "red";
+        }
+    } else {
+        resultElement.innerHTML = "Þú átt ekki nóg af krónum til að spila. Safnaðu meira! 🙃";
+        resultElement.style.color = "orange";
+    }
+});
