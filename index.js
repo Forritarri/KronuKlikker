@@ -6,23 +6,60 @@ let intervalId = null; // # Tímabilsauðkenni fyrir sjálfvirka söfnun
 
 // # Uppfærslulistar (niður minnkuð áhrif og hækkaður kostnaður)
 let autoClickers = [
-    { name: "Plata krakka til þess að hjálpa þér", cost: 50, increment: 1 },
-    { name: "Plata heimilislausa til þess að hjálpa þér", cost: 250, increment: 5 },
-    { name: "Plata fólk til þess að hjálpa þér", cost: 1000, increment: 10 },
-    { name: "Kaupa lélega peningavél", cost: 10000, increment: 50 },
-    { name: "Krónu-finnandi drónar", cost: 50000, increment: 100 },
-    { name: "Walter Krónu White til að framleiða Krónur", cost: 125000, increment: 500 },
-    { name: "Ástþór Magnússon stofnar ólöglegan Krónubransa", cost: 250000, increment: 1000 },
-    { name: "Guðni Th. byrjar að framleiða Krónur", cost: 500000, increment: 1500 },
-    { name: "Byggja Krónu-verksmiðju uppi á hálendi", cost: 1000000, increment: 10000 },
+    { name: "Gömul Dúfa. Kaupa gamla þjálfaða dúfu sem finnur Krónur og kemur með þær til þín.", cost: 1000, increment: 10 },
+    { name: "Ódýr Þræll. Fyrir 5000 Kr. getur þú keypt aldraðan þræl frá Krónulandi sem safnar Krónum haanda þér.", cost: 5000, increment: 20 },
+    { name: "", cost: 10000, increment: 50 },
+    { name: "Ágætur Dróni. Fyrir 25.000 Kr. getur þú keypt Ágætan dróna, forritaður að finna 100 Kr. peninga og koma með þá til þín.", cost: 25000, increment: 100 },
+    { name: "Starfsmaður. Þú ert orðin/n þekktur í Krónu-undirheimunum. Þar finnur þú starfsmann sem vill helga líf sitt að hjálpa þér, fyrir aðeins 50.000 Kr.", cost: 50000, increment: 200 },
+    { name: "", cost: 125000, increment: 500 },
+    { name: "", cost: 250000, increment: 1000 },
+    { name: "", cost: 500000, increment: 2000 },
+    { name: "", cost: 1_000_000, increment: 4000 },
+    { name: "", cost: 2_500_000, increment: 10_000 },
+    { name: "", cost: 5_000_000, increment: 20_000 },
+    { name: "", cost: 12_500_000, increment: 50_000 },
+    { name: "", cost: 25_000_000, increment: 100_000 },
+    { name: "", cost: 50_000_000, increment: 200_000 },
+    { name: "", cost: 125_000_000, increment: 500_000 },
+    { name: "", cost: 250_000_000, increment: 1_000_000 },
+    { name: "", cost: 500_000_000, increment: 2_000_000 },
+    { name: "", cost: 1_000_000_000, increment: 4_000_000 },
+    { name: "", cost: 2_500_000_000, increment: 10_000_000 },
+    { name: "", cost: 5_000_000_000, increment: 20_000_000 },
+    { name: "", cost: 12_500_000_000, increment: 50_000_000 },
+    { name: "", cost: 25_000_000_000, increment: 100_000_000 },
+    { name: "", cost: 50_000_000_000, increment: 200_000_000 },
+    { name: "", cost: 125_000_000_000, increment: 500_000_000 },
+    { name: "", cost: 250_000_000_000, increment: 1_000_000_000 },
+    { name: "", cost: 500_000_000_000, increment: 2_000_000_000 },
+    { name: "", cost: 1_000_000_000_000, increment: 4_000_000_000 },
+    { name: "", cost: 2_500_000_000_000, increment: 10_000_000_000 },
+    { name: "", cost: 5_000_000_000_000, increment: 20_000_000_000 },
+    { name: "", cost: 12_500_000_000_000, increment: 50_000_000_000 },
+    { name: "", cost: 25_000_000_000_000, increment: 100_000_000_000 },
+    { name: "", cost: 50_000_000_000_000, increment: 200_000_000_000 },
+    { name: "", cost: 125_000_000_000_000, increment: 500_000_000_000 },
+    { name: "", cost: 250_000_000_000_000, increment: 1_000_000_000_000 },
+    { name: "", cost: 500_000_000_000_000, increment: 2_000_000_000_000 },
+    { name: "", cost: 1_000_000_000_000_000, increment: 4_000_000_000_000 },
+    { name: "", cost: 2_500_000_000_000_000, increment: 10_000_000_000_000 },
+    { name: "", cost: 5_000_000_000_000_000, increment: 20_000_000_000_000 },
+    { name: "", cost: 12_500_000_000_000_000, increment: 50_000_000_000_000 },
+    { name: "", cost: 25_000_000_000_000_000, increment: 100_000_000_000_000 },
+    { name: "", cost: 50_000_000_000_000_000, increment: 200_000_000_000_000 },
+    { name: "", cost: 125_000_000_000_000_000, increment: 500_000_000_000_000 },
+    { name: "", cost: 250_000_000_000_000_000, increment: 1_000_000_000_000_000 },
+    { name: "", cost: 500_000_000_000_000_000, increment: 2_000_000_000_000_000 },
+    { name: "", cost: 1_000_000_000_000_000_000, increment: 4_000_000_000_000_000 },
 ];
 
+
 let manualUpgrades = [
-    { name: "Opna augun", cost: 100, increment: 1 },
-    { name: "Gramsa í ruslinu", cost: 500, increment: 3 },
-    { name: "Segull", cost: 2500, increment: 5 },
-    { name: "Vélmenni", cost: 10000, increment: 40 },
-    { name: "Blessun Jesú Krists", cost: 50000, increment: 60 },
+    { name: "Segulprik. Kaupa prik með segul límdan á enda priksins frá heimilislausum náunga, sem er kallaður Hákon Heimilislausi, til að hjálpa þér að safna Krónum.", cost: 100, increment: 1 },
+    { name: "Betra Segulprik. Kaupa betri segul úr Bauhaus fyrir prikið þannig þú getur safnað fleiri Krónum.", cost: 500, increment: 3 },
+    { name: "Ruslatöng með Segul. Kaupa ruslatöng með segul frá skuggalegum náunga sem er Kalli Króna.", cost: 2500, increment: 5 },
+    { name: "Seðlapentari. Fyrir aðeins 10.000 Kr. getur þú keypt lélegan seðlaprentara frá Ímu (Íslenskt Temu).", cost: 10000, increment: 40 },
+    { name: "Betri Seðlaprentari. Fyrir 50.000 Kr. getur þú keypt aðeins betri seðlaprentara frá Íslazon (Íslenskt Amazon).", cost: 50000, increment: 60 },
 ];
 
 // # Handvirkur smellur
@@ -103,7 +140,7 @@ updateShop();
 document.getElementById("play-btn").addEventListener("click", () => {
     let currentPoints = parseFloat(gem.innerHTML); // Númer af núverandi krónur
     const cost = 100; // Kostnaður fyrir leikinn
-    const reward = 100000; // Vinningur
+    const reward = 1000000; // Vinningur
     const resultElement = document.getElementById("result"); // Staða niðurstaðna
 
     if (currentPoints >= cost) {
